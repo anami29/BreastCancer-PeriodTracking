@@ -1,0 +1,97 @@
+.insights-container {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.insights-container h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto; /* Allows horizontal scrolling on small screens */
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.filter-tab {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 1px solid #e0e0e0;
+  background-color: #f9f9f9;
+  color: #555;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.filter-tab.active,
+.filter-tab:hover {
+  background-color: #8b7dfd;
+  color: white;
+  border-color: #8b7dfd;
+}
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.insight-card {
+  background-color: #f7f5ff;
+  border-radius: 15px;
+  padding: 1rem;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.insight-card p {
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.insight-card span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #8b7dfd;
+}
+/* ... (keep all existing styles) ... */
+
+/* --- ADD THESE NEW STYLES --- */
+
+.age-group-filters {
+    margin-top: -0.5rem; /* Reduce space above age filters */
+    margin-bottom: 1.5rem; /* Add space below age filters */
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #f0f0f0; /* Separator line */
+}
+
+/* Make age tabs slightly smaller */
+.age-tab {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+}
+
+.no-results-message {
+    grid-column: 1 / -1; /* Make message span all columns */
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    margin-top: 1rem;
+}
+/* ... (keep existing styles) ... */
+
+.modal-prompt {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    margin-top: 2rem;
+}

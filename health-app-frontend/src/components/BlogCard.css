@@ -1,0 +1,54 @@
+.blog-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  /* --- UPDATED: Size increased by 20% (from 220px) --- */
+  flex: 0 0 264px;
+  height: 264px;
+}
+
+.blog-card-image {
+  width: 100%;
+  /* --- UPDATED: Height increased by 20% (from 120px) --- */
+  height: 144px;
+  object-fit: cover;
+}
+
+.blog-card-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.blog-card-title {
+  /* --- UPDATED: Font size increased --- */
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+  flex-grow: 1;
+}
+
+.read-more-link {
+  /* --- UPDATED: Font size increased --- */
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #d81b60;
+  text-decoration: none;
+  margin-top: 0.5rem;
+  align-self: flex-start;
+}
+.read-more-link:hover {
+  text-decoration: underline;
+}
+
+/* Hiding extra elements to keep the card clean */
+.blog-card-author,
+.blog-card-excerpt {
+  display: none;
+}

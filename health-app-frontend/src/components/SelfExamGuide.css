@@ -1,0 +1,123 @@
+.guide-container {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.guide-container h3 {
+  margin-top: 0;
+  text-align: center;
+  color: #333;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* --- NEW STYLES for the two-column layout --- */
+
+.step-item {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start; /* Changed from 'center' to align items to the top */
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 1rem;
+}
+
+.step-content {
+  flex: 2; /* Allows the text content to take up 2/3 of the space */
+}
+
+/* Find and replace this rule */
+.step-image {
+  flex-shrink: 0; /* Prevents the image from shrinking */
+  width: 350px; /* Set a fixed width */
+  height: 400px; /* Set a fixed height to make it square */
+  border-radius: 8px;
+  object-fit: cover; /* Ensures the image fills the square without distortion */
+}
+
+.step-item:last-of-type {
+  border-bottom: none;
+}
+
+.step-content h4 {
+  font-size: 1.1rem;
+  color: #d81b60;
+  margin-top: 0;
+}
+
+.step-content p {
+  line-height: 1.6;
+  color: #555;
+  margin-top: 0;
+}
+
+.look-for-section {
+  margin-top: 1.5rem;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid #d81b60;
+}
+
+.look-for-section h5 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.look-for-section ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* --- Doctor Note and Video styles remain the same --- */
+.doctor-note-section {
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem;
+  background-color: #fffbe6;
+  border: 1px solid #ffe58f;
+  border-radius: 8px;
+  margin: 1rem 0 2rem 0;
+}
+
+.note-icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.doctor-note-section p {
+  margin: 0;
+  font-weight: 600;
+  color: #8a6d3b;
+  line-height: 1.6;
+}
+
+.video-section h4 {
+  font-size: 1.1rem;
+  color: #d81b60;
+}
+
+.video-responsive {
+  overflow: hidden;
+  position: relative;
+  padding-top: 56.25%;
+}
+
+.video-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

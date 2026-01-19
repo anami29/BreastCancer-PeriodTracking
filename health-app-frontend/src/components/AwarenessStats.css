@@ -1,0 +1,44 @@
+.stats-container {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Add scroll if content is too long */
+}
+
+.stats-container h3 {
+  margin-top: 0;
+  color: #333;
+  text-align: center;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 0.75rem;
+}
+
+.facts-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.facts-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.fact-icon {
+  font-size: 1.2rem;
+  margin-right: 0.75rem;
+  margin-top: 2px;
+}
+
+.facts-list p {
+  margin: 0;
+  color: #555;
+}

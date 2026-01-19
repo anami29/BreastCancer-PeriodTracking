@@ -1,0 +1,36 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #d81b60; /* Pink color */
+}
+
+.navbar-links a {
+  color: #333;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.navbar-links a:hover {
+  color: #d81b60;
+}
+.navbar-streak {
+  font-weight: 600;
+  color: #333;
+  margin-right: 1.5rem;
+  background-color: #fef08a; /* A soft yellow */
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+}

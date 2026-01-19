@@ -1,0 +1,52 @@
+.cycle-chart-widget {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+.cycle-chart-widget header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cycle-chart-widget h4 {
+  margin: 0;
+  color: #333;
+}
+.cycle-chart-widget span {
+  font-size: 0.9rem;
+  color: #888;
+}
+.chart-body {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 0.5rem;
+  height: 80px;
+  flex-grow: 1;
+}
+.bar-wrapper {
+  text-align: center;
+}
+.bar {
+  width: 10px;
+  background-color: #d1c8ff;
+  border-radius: 5px;
+}
+.bar-label {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 0.25rem;
+}
+/* ... (keep existing styles) ... */
+
+.no-data-message {
+    width: 100%;
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    align-self: center; /* Center vertically */
+}

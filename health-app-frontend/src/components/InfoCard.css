@@ -1,0 +1,33 @@
+.info-card-widget {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+}
+.info-icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+.info-text p {
+  margin: 0;
+  color: #555;
+  font-weight: 600;
+}
+.info-text h4 {
+  margin: 0.25rem 0 0 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+/* ... (keep existing styles) ... */
+
+.info-card-widget.clickable {
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.info-card-widget.clickable:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}

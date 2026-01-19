@@ -1,0 +1,77 @@
+.menstruation-container {
+  background-color: #f7f5ff;
+  min-height: 100vh;
+}
+
+.menstruation-grid {
+  display: grid;
+  gap: 1.5rem;
+  padding: 2rem;
+  grid-template-columns: 3fr 2fr;
+  grid-template-areas:
+    "greeting   search"
+    "tracker    sidebar"
+    "feeling    other"
+    "insights   insights";
+  /* This tells the grid items themselves to stretch vertically */
+  align-items: stretch;
+}
+
+/* Assigning components to grid areas */
+.grid-item.greeting {
+  grid-area: greeting;
+  align-self: center;
+}
+.grid-item.search-bar {
+  grid-area: search;
+  align-self: center;
+}
+.grid-item.period-tracker {
+  grid-area: tracker;
+}
+.grid-item.sidebar-widgets {
+  grid-area: sidebar;
+}
+.grid-item.feeling-group {
+  grid-area: feeling;
+}
+.grid-item.other-info-group {
+  grid-area: other;
+}
+.grid-item.expert-insights {
+  grid-area: insights;
+}
+
+.sidebar-widgets {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.greeting h2 {
+  margin: 0;
+  color: #333;
+}
+.search-bar input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: none;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.section-title {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #333;
+}
+.card-pair {
+  display: flex;
+  gap: 1.5rem;
+}
+.card-pair > * {
+  flex: 1;
+}
+/* ... (keep all your existing styles) ... */
+
+/* --- ADD THIS NEW RULE at the end of the file --- */

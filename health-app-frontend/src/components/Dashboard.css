@@ -1,0 +1,80 @@
+.dashboard-container {
+  background-color: #f4f7f6;
+  min-height: 100vh;
+}
+
+.dashboard-main-content {
+  padding: 2rem;
+}
+
+/* --- NEW STYLES for the new layout --- */
+
+.carousel-wrapper {
+  margin-bottom: 2rem;
+}
+
+.info-widgets-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Create three equal-width columns */
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  align-items: stretch;
+}
+
+/* This makes each widget take up half the space */
+.info-widgets-container > * {
+  flex: 1;
+}
+
+.assessment-cta-container {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.assessment-button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #d81b60;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.assessment-button:hover {
+  background-color: #c2185b;
+  transform: translateY(-3px);
+}
+
+.dashboard-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  border-bottom: 3px solid #d81b60;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.blog-list {
+  display: flex;
+  overflow-x: auto;
+  gap: 1.5rem;
+  padding-bottom: 1.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: #d81b60 #f4f7f6;
+}
+
+.blog-list::-webkit-scrollbar {
+  height: 8px;
+}
+.blog-list::-webkit-scrollbar-track {
+  background: #f4f7f6;
+}
+.blog-list::-webkit-scrollbar-thumb {
+  background-color: #d81b60;
+  border-radius: 10px;
+}

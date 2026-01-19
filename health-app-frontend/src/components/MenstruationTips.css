@@ -1,0 +1,46 @@
+.tips-widget-container {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center; /* Vertically align icon and text */
+    height: 100%; /* Make it fill the grid cell height */
+    box-sizing: border-box;
+}
+
+.tips-icon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    align-self: flex-start; /* Align icon to the top */
+}
+
+.tips-text-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.tips-title {
+    margin: 0 0 0.5rem 0;
+    color: #555;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.tip-text {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+/* --- Fade Animation --- */
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; transform: translateY(10px); } /* Start and end invisible */
+    20%, 80% { opacity: 1; transform: translateY(0); }   /* Visible in the middle */
+}
+
+.fade-in-out {
+    animation: fadeInOut 5s ease-in-out infinite; /* Apply animation, matching the interval */
+}

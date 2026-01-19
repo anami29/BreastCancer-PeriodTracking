@@ -1,0 +1,48 @@
+.chat-widget-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+}
+
+.chat-window {
+  width: 350px;
+  height: 500px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  animation: slide-up 0.3s ease-out;
+}
+
+.chat-icon-button {
+  width: 60px;
+  height: 60px;
+  background-color: #d81b60;
+  color: white;
+  border-radius: 50%;
+  border: none;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  margin-left: auto;
+}
+
+.chat-icon-button:hover {
+  transform: scale(1.1);
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
