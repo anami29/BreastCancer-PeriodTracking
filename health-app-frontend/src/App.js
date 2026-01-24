@@ -13,10 +13,14 @@ import {
 import SelectionDashboard from "./components/SelectionDashboard";
 import BreastCancerPage from "./components/BreastCancerPage";
 import AssessmentPage from "./components/AssessmentPage";
+import SelfAssessmentPage from "./components/SelfAssessmentPage";
+import VideoAssessmentPage from "./components/VideoAssessmentPage";
 import ProfilePage from "./components/ProfilePage";
 import MenstruationPage from "./components/MenstruationPage";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
+import NearbyHospitals from "./components/NearbyHospitals";
+
 import "./App.css";
 
 function App() {
@@ -32,8 +36,11 @@ function App() {
           <Route path="/dashboard" element={<SelectionDashboard />} />
           <Route path="/breast-cancer" element={<BreastCancerPage />} />
           <Route path="/assessment" element={<AssessmentPage />} />
+          <Route path="/self-assessment" element={<SelfAssessmentPage />} />
+          <Route path="/video-assessment" element={<VideoAssessmentPage />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/menstruation" element={<MenstruationPage />} />
+          <Route path="/nearby-hospitals" element={<NearbyHospitals />} />
         </Routes>
       </div>
     </Router>

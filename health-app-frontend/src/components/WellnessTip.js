@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "./WellnessTip.css";
 
 const allTips = [
@@ -21,8 +22,27 @@ function WellnessTip() {
   const [displayedTips, setDisplayedTips] = useState([]);
   // --- NEW: State to control the animation ---
   const [isAnimating, setIsAnimating] = useState(false);
+  const [profileData, setProfileData] = useState(null);
 
   useEffect(() => {
+    const fetchProfileData = async () => {
+      const userEmail = localStorage.getItem("userEmail");
+      if (userEmail) {
+        try {
+          const response = await axios.get(
+            `http://localhost:8081/api/profile`,
+            {
+              params: { email: userEmail },
+            },
+          );
+          setProfileData(response.data);
+        } catch (error) {
+          console.error("Failed to fetch profile data:", error);
+        }
+      }
+    };
+    fetchProfileData();
+
     setDisplayedTips(getThreeRandomTips());
 
     const intervalId = setInterval(() => {
@@ -47,7 +67,9 @@ function WellnessTip() {
 
   return (
     <div className="wellness-container">
-      <h3>{getGreeting()}, Kavita!</h3>
+      <h3>
+        {getGreeting()}, {profileData ? profileData.name : "Kavita"}!
+      </h3>
       <p className="tip-intro">Here are your wellness tips for today:</p>
 
       {/* 4. Apply the animation class conditionally */}

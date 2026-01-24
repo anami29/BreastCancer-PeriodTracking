@@ -15,8 +15,9 @@ public class SecurityConfig {
 
     public SecurityConfig() {
         System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
-        System.out.println(">>> SECURITY CONFIG LOADED - /api/profile is now permitted <<<");
+        System.out.println(">>> SECURITY CONFIG LOADED - /api/risk-assessment is now permitted <<<");
         System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+        // Force recompilation
     }
 
     @Bean
@@ -27,13 +28,14 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-            .cors(withDefaults())
-            .csrf(csrf -> csrf.disable())
-            .authorizeHttpRequests(auth -> auth
-                // Add "/api/cycle/**" to permit all cycle-related requests
-                .requestMatchers("/api/auth/**", "/api/profile", "/api/streak/**", "/api/cycle/**").permitAll()
-                .anyRequest().authenticated()
-            );
+                .cors(withDefaults())
+                .csrf(csrf -> csrf.disable())
+                .authorizeHttpRequests(auth -> auth
+                        // Add "/api/cycle/**" to permit all cycle-related requests
+                        .requestMatchers("/api/auth/**", "/api/profile", "/api/streak/**", "/api/cycle/**",
+                                "/api/risk-assessment/**")
+                        .permitAll()
+                        .anyRequest().authenticated());
         return http.build();
     }
 }
