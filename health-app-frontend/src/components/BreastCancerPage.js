@@ -4,6 +4,9 @@ import Navbar from "./Navbar";
 import BlogCard from "./BlogCard";
 import { Link } from "react-router-dom";
 import "./Dashboard.css";
+import NearbyHospitals from "./NearbyHospitals";
+import geneticTestingImg from "../assets/images/genetic-testing.jpeg";
+import lifeAfterImg from "../assets/images/life-after.jpeg";
 
 import ImageCarousel from "./ImageCarousel";
 import AwarenessStats from "./AwarenessStats";
@@ -13,45 +16,7 @@ import ChatWidget from "./ChatWidget"; // 1. Import the new component
 
 import "./BreastCancerPage.css"; // Add CSS for modal styling
 
-const blogData = [
-  {
-    id: 1,
-    title: "Understanding Early Detection",
-    imageUrl:
-      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500",
-    readMoreUrl:
-      "https://www.nationalbreastcancer.org/early-detection-of-breast-cancer/",
-  },
-  {
-    id: 2,
-    title: "Myth vs. Fact",
-    imageUrl:
-      "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=500",
-    readMoreUrl: "https://www.bcrf.org/breast-cancer-myths-and-facts/",
-  },
-  {
-    id: 3,
-    title: "Nutrition and Lifestyle",
-    imageUrl:
-      "https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=500",
-    readMoreUrl:
-      "https://www.aicr.org/cancer-prevention/food-facts/learn-about-breast-cancer/",
-  },
-  {
-    id: 4,
-    title: "Genetic Testing",
-    imageUrl: "images.jpeg",
-    readMoreUrl:
-      "https://www.cancer.org/cancer/types/breast-cancer/risk-and-prevention/genetic-testing-for-breast-cancer.html",
-  },
-  {
-    id: 5,
-    title: "Life After Treatment",
-    imageUrl:
-      "https://images.unsplash.com/photo-1578496479532-350b9184e1b8?w=500",
-    readMoreUrl: "https://www.breastcancer.org/treatment/survivorship",
-  },
-];
+import blogData from "../data/blogData";
 
 function BreastCancerPage() {
   const [streakData, setStreakData] = useState({ currentStreak: 0 });

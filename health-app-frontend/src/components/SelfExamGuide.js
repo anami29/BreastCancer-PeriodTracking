@@ -66,6 +66,11 @@ function SelfExamGuide() {
     <div className="guide-container">
       <h3>How to Perform a Self-Exam</h3>
 
+      <div className="doctor-note-section">
+        <span className="note-icon">⚠️</span>
+        <p>{doctorNote}</p>
+      </div>
+
       {stepsData.map((step, index) => (
         <div key={index} className="step-item">
           <div className="step-content">
@@ -84,13 +89,8 @@ function SelfExamGuide() {
         </div>
       ))}
 
-      <div className="doctor-note-section">
-        <span className="note-icon">⚠️</span>
-        <p>{doctorNote}</p>
-      </div>
-
-      <div className="video-section">
-        <h4>Video Guide</h4>
+      {/* <div className="video-section">
+        <h4>dddVideo Guide</h4>
         <div className="video-responsive">
           <iframe
             src={`https://www.youtube.com/embed/${videoId}`}
@@ -100,7 +100,7 @@ function SelfExamGuide() {
             allowFullScreen
           ></iframe>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
